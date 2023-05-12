@@ -19,7 +19,10 @@ fn main() {
             ),
             "4" => make_deposit(&mut account),
             "5" => make_withdrawal(&mut account),
-            "6" => println!("Add Interest::TODO"),
+            "6" => {
+                account.calc_interest();
+                println!("Interest Added.");
+            }
             "7" => println!("Thank you. Have a good day!"),
             _ => println!("Must be a value between 1 and 7. Try again"),
         };
